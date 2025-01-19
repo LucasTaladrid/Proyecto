@@ -3,7 +3,6 @@ package com.example.proyecto.ui.view
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,7 +20,7 @@ import androidx.navigation.NavController
 
 
 @Composable
-fun Pantalla1(navController: NavController){
+fun Pantalla4(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -34,7 +33,7 @@ fun Pantalla1(navController: NavController){
                 .fillMaxWidth()
                 .border(2.dp, Color.Black) // Borde del marco
         ) {
-            Text("Contenido Principal Pantalla 1", modifier = Modifier.align(Alignment.Center))
+            Text("Contenido Principal Pantalla 4", modifier = Modifier.align(Alignment.Center))
         }
 
         // Fila de Botones
@@ -52,26 +51,26 @@ fun Pantalla1(navController: NavController){
             }
             // Botón 2
             Button(
-                onClick = { navController.navigate("pantalla2") /* Acción del Botón 2 */ },
+                onClick = { navController.navigate("pantalla2") /* Acción del Botón 1 */ },
                 modifier = Modifier.weight(1f) // Ocupa el mismo espacio que los demás botones
             ) {
                 Text("Botón 2")
             }
             // Botón 3
             Button(
-                onClick = {navController.navigate("pantalla3") },
+                onClick = { navController.navigate("pantalla3")  },
                 modifier = Modifier.weight(1f) // Ocupa el mismo espacio que los demás botones
             ) {
                 Text("Botón 3")
             }
             Button(
-                onClick = {navController.navigate("pantalla4")  },
+                onClick = { navController.navigate("pantalla4")  },
                 modifier = Modifier.weight(1f) // Ocupa el mismo espacio que los demás botones
             ) {
                 Text("Botón 4")
 
+            }
         }
-    }
     }
 }
 
